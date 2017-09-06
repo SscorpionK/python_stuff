@@ -1,9 +1,8 @@
-datos = "From stephen.maqrquard@uct.ac.za Sat Jan 7"
-pos_arroba = datos.find('@')
-print pos_arroba
+manf = open('mbox-short.txt')
 
-pos_esp = datos.find(' ', pos_arroba)
-print pos_esp
+for linea in manf:
+   linea = linea.rstrip()
+   if not linea.startswith('From '): continue
+   palabras = linea.split()
+   print palabras[2]
 
-host = datos[pos_arroba+1:pos_esp]
-print host
