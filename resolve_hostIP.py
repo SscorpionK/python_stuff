@@ -10,7 +10,6 @@ def resolve(host):
 host = raw_input('Enter a valid website: ')
 try:
     ip = resolve(host)
-    print host, 'IP is: ', resolve(host)
+    print host, 'IP is: ', ip
 except:
     print host, 'is not a valid website'
-
